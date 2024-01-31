@@ -15,3 +15,23 @@ dir.create('R_output/images', showWarnings = TRUE, recursive = T)
 dir.create('R_output/Rmarkdown', showWarnings = TRUE, recursive = T)
 dir.create('R_output/spatial', showWarnings = TRUE, recursive = T)
  
+
+
+# ================================================
+# check for packages and Install missing ones
+# ================================================
+library(shaRe) # get it from devtools::install_github('filippo-ferrario/shaRe', ref='HEAD')
+
+checkNinst(c('tidyverse',
+'foreach',
+'doParallel',
+'ezknitr'), inst=F)
+
+
+# ======================
+# load packages
+# ======================
+library(tidyverse)
+library(foreach)
+library(doParallel)
+library(ezknitr)
