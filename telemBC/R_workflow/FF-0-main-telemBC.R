@@ -44,5 +44,5 @@ library(ezknitr)
 # example on how parallize you code
 # -----------------------------------
 # input: none
-ezspin(file='R_workflow/example-parallel_processing.R', keep_md=FALSE,  out_dir='R_output/Rmarkdown')
-# input: /R_output/Rmarkdown/example-parallel_processing.html
+ezspin(file='R_workflow/FF-example-parallel_processing.R', keep_md=FALSE,  out_dir='R_output/Rmarkdown')
+# input: /R_output/Rmarkdown/FF-example-parallel_processing.html
