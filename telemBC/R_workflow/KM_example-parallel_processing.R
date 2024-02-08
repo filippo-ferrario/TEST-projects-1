@@ -1,7 +1,7 @@
 # ===============================================================================
 # Name   	: Parallel processing example
-# Author 	: Filippo Ferrario 
-# Date   	:  [dd-mm-yyyy] 31-01-2024
+# Author 	: Filippo Ferrario : run by Katie MacGregor
+# Date   	:  [dd-mm-yyyy] 31-01-2024 : 2024-02-08
 # Version	: 0.1
 # URL		: 
 # Aim    	: Provide an example on how to use parallel processing in R

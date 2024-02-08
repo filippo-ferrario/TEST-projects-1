@@ -1,20 +1,24 @@
 # ===============================================================================
-# Name   	: Main TelemBC
-# Author 	: FF
+# Name   	: Main Telem
+# Author 	: KM
 # Date   	:  [dd-mm-yyyy] 26-01-2024
 # Version	: 1
 # URL		: 
 # Aim    	: test collaborative strategy
 # ===============================================================================
 
+# setwd to use my R version with all installed libraries and test running the script
+setwd("C:\\Users\\MACGREGORK\\Dropbox\\aaa_Articles_project_organization\\Urchin_telemetry_HR2_Quebec_Pacific_GitHub\\TEST-projects-1\\telemBC")
+
+# setwd to use once opening R within this folder is functional
 setwd('telemBC')
 
 # run this section only the first time.
-dir.create('R_output/dataset', showWarnings = TRUE, recursive = T)
-dir.create('R_output/images', showWarnings = TRUE, recursive = T)
-dir.create('R_output/Rmarkdown', showWarnings = TRUE, recursive = T)
-dir.create('R_output/spatial', showWarnings = TRUE, recursive = T)
- 
+# dir.create('R_output/dataset', showWarnings = TRUE, recursive = T)
+# dir.create('R_output/images', showWarnings = TRUE, recursive = T)
+# dir.create('R_output/Rmarkdown', showWarnings = TRUE, recursive = T)
+# dir.create('R_output/spatial', showWarnings = TRUE, recursive = T)
+
 
 
 # ================================================
@@ -44,5 +48,5 @@ library(ezknitr)
 # example on how parallize you code
 # -----------------------------------
 # input: none
-ezspin(file='R_workflow/example-parallel_processing.R', keep_md=FALSE,  out_dir='R_output/Rmarkdown')
+ezspin(file='R_workflow/KM_example-parallel_processing.R', keep_md=FALSE,  out_dir='R_output/Rmarkdown')
 # input: /R_output/Rmarkdown/example-parallel_processing.html
