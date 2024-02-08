@@ -20,8 +20,8 @@ dir.create('R_output/spatial', showWarnings = TRUE, recursive = T)
 # ================================================
 # check for packages and Install missing ones
 # ================================================
-#library(shaRe) # get it from devtools::install_github('filippo-ferrario/shaRe', ref='HEAD')
-
+# library(shaRe) # get it from devtools::install_github('filippo-ferrario/shaRe', ref='HEAD')
+# 
 # checkNinst(c('tidyverse',
 # 'foreach',
 # 'doParallel',

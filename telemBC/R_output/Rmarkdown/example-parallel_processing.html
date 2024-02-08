@@ -154,7 +154,7 @@ section.footnotes::before {
 # Aim    	: Provide an example on how to use parallel processing in R
 # ===============================================================================
 </code></pre>
-<p>run on the Thu Feb  1 10:08:32 2024</p>
+<p>run on the Thu Feb  8 16:09:08 2024</p>
 <h1 id="parallel-processing-example">Parallel processing example</h1>
 <p>This script is an example on how to use parallel processing in R.<br />
 Parallel processing is usefull to speed up calculations taking advantage of more than 1 core, if these are available on your pc.</p>
@@ -169,12 +169,12 @@ my_data$site&lt;-as.factor(my_data$site)
 summary(my_data)
 </code></pre>
 <pre><code>##       site           x           
-##  site_01:100   Min.   :-2.88688  
-##  site_02:100   1st Qu.:-0.70209  
-##  site_03:100   Median : 0.03531  
-##  site_04:100   Mean   :-0.01694  
-##  site_05:100   3rd Qu.: 0.65292  
-##  site_06:100   Max.   : 3.13279  
+##  site_01:100   Min.   :-3.41630  
+##  site_02:100   1st Qu.:-0.68715  
+##  site_03:100   Median : 0.02797  
+##  site_04:100   Mean   : 0.00528  
+##  site_05:100   3rd Qu.: 0.64954  
+##  site_06:100   Max.   : 3.47278  
 ##  (Other):400
 </code></pre>
 <pre><code class="language-r">my_data %&gt;%
@@ -224,60 +224,60 @@ for (i in seq_along(sites)){
 <pre><code class="language-r">my_means
 </code></pre>
 <pre><code>## [[1]]
-##      site      mean_x
-## 1 site_01 -0.07830318
+##      site    mean_x
+## 1 site_01 0.1094112
 ## 
 ## [[2]]
-##      site     mean_x
-## 1 site_02 -0.1105719
+##      site      mean_x
+## 1 site_02 -0.05641448
 ## 
 ## [[3]]
-##      site     mean_x
-## 1 site_03 0.07042259
+##      site      mean_x
+## 1 site_03 -0.01679702
 ## 
 ## [[4]]
 ##      site      mean_x
-## 1 site_04 -0.01167078
+## 1 site_04 -0.05495145
 ## 
 ## [[5]]
-##      site     mean_x
-## 1 site_05 -0.0676093
+##      site      mean_x
+## 1 site_05 -0.09106323
 ## 
 ## [[6]]
-##      site       mean_x
-## 1 site_06 -0.006799576
+##      site    mean_x
+## 1 site_06 0.1579891
 ## 
 ## [[7]]
 ##      site     mean_x
-## 1 site_07 -0.1309067
+## 1 site_07 -0.0804188
 ## 
 ## [[8]]
-##      site      mean_x
-## 1 site_08 -0.07931092
+##      site     mean_x
+## 1 site_08 0.05828263
 ## 
 ## [[9]]
 ##      site     mean_x
-## 1 site_09 0.05367691
+## 1 site_09 0.07098388
 ## 
 ## [[10]]
-##      site    mean_x
-## 1 site_10 0.1916662
+##      site      mean_x
+## 1 site_10 -0.04421739
 </code></pre>
 <p>We can now convert this list into a dataframe by doing</p>
 <pre><code class="language-r">my_means_df&lt;- bind_rows(my_means)
 my_means_df
 </code></pre>
-<pre><code>##       site       mean_x
-## 1  site_01 -0.078303180
-## 2  site_02 -0.110571868
-## 3  site_03  0.070422586
-## 4  site_04 -0.011670779
-## 5  site_05 -0.067609299
-## 6  site_06 -0.006799576
-## 7  site_07 -0.130906727
-## 8  site_08 -0.079310917
-## 9  site_09  0.053676914
-## 10 site_10  0.191666237
+<pre><code>##       site      mean_x
+## 1  site_01  0.10941118
+## 2  site_02 -0.05641448
+## 3  site_03 -0.01679702
+## 4  site_04 -0.05495145
+## 5  site_05 -0.09106323
+## 6  site_06  0.15798907
+## 7  site_07 -0.08041880
+## 8  site_08  0.05828263
+## 9  site_09  0.07098388
+## 10 site_10 -0.04421739
 </code></pre>
 <h2 id="parallel-example">Parallel example</h2>
 <h1 id="section_3">––––––––––</h1>
@@ -302,34 +302,34 @@ str(df_list)
 <pre><code>## List of 10
 ##  $ site_01:'data.frame':	100 obs. of  2 variables:
 ##   ..$ site: Factor w/ 10 levels &quot;site_01&quot;,&quot;site_02&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...
-##   ..$ x   : num [1:100] 0.186 -0.105 0.268 -0.793 0.119 ...
+##   ..$ x   : num [1:100] -0.825 0.806 -0.668 -0.841 0.644 ...
 ##  $ site_02:'data.frame':	100 obs. of  2 variables:
 ##   ..$ site: Factor w/ 10 levels &quot;site_01&quot;,&quot;site_02&quot;,..: 2 2 2 2 2 2 2 2 2 2 ...
-##   ..$ x   : num [1:100] 1.0896 0.6271 -2.8869 -0.0356 1.8529 ...
+##   ..$ x   : num [1:100] -1.0334 -1.0785 -0.0425 -1.3167 1.4002 ...
 ##  $ site_03:'data.frame':	100 obs. of  2 variables:
 ##   ..$ site: Factor w/ 10 levels &quot;site_01&quot;,&quot;site_02&quot;,..: 3 3 3 3 3 3 3 3 3 3 ...
-##   ..$ x   : num [1:100] 1.918 -1.124 -0.749 -0.276 -0.65 ...
+##   ..$ x   : num [1:100] 0.6841 -1.8287 -0.9065 -1.1639 0.0322 ...
 ##  $ site_04:'data.frame':	100 obs. of  2 variables:
 ##   ..$ site: Factor w/ 10 levels &quot;site_01&quot;,&quot;site_02&quot;,..: 4 4 4 4 4 4 4 4 4 4 ...
-##   ..$ x   : num [1:100] -0.829 -0.466 0.621 0.673 0.04 ...
+##   ..$ x   : num [1:100] 0.0555 1.3706 -0.372 0.3365 -2.3534 ...
 ##  $ site_05:'data.frame':	100 obs. of  2 variables:
 ##   ..$ site: Factor w/ 10 levels &quot;site_01&quot;,&quot;site_02&quot;,..: 5 5 5 5 5 5 5 5 5 5 ...
-##   ..$ x   : num [1:100] -0.208 -1.319 0.123 -1.497 0.793 ...
+##   ..$ x   : num [1:100] -1.111 1.338 0.491 0.306 0.674 ...
 ##  $ site_06:'data.frame':	100 obs. of  2 variables:
 ##   ..$ site: Factor w/ 10 levels &quot;site_01&quot;,&quot;site_02&quot;,..: 6 6 6 6 6 6 6 6 6 6 ...
-##   ..$ x   : num [1:100] 0.607 0.323 0.463 0.146 0.985 ...
+##   ..$ x   : num [1:100] 0.4631 1.1435 0.6535 -0.1769 0.0597 ...
 ##  $ site_07:'data.frame':	100 obs. of  2 variables:
 ##   ..$ site: Factor w/ 10 levels &quot;site_01&quot;,&quot;site_02&quot;,..: 7 7 7 7 7 7 7 7 7 7 ...
-##   ..$ x   : num [1:100] 0.196 0.633 -0.109 0.838 -0.449 ...
+##   ..$ x   : num [1:100] -1.068 -1.379 0.68 0.258 -0.847 ...
 ##  $ site_08:'data.frame':	100 obs. of  2 variables:
 ##   ..$ site: Factor w/ 10 levels &quot;site_01&quot;,&quot;site_02&quot;,..: 8 8 8 8 8 8 8 8 8 8 ...
-##   ..$ x   : num [1:100] -1.5061 0.021 0.4845 -1.0362 -0.0812 ...
+##   ..$ x   : num [1:100] 0.0538 0.1358 -0.6108 -0.7069 0.4982 ...
 ##  $ site_09:'data.frame':	100 obs. of  2 variables:
 ##   ..$ site: Factor w/ 10 levels &quot;site_01&quot;,&quot;site_02&quot;,..: 9 9 9 9 9 9 9 9 9 9 ...
-##   ..$ x   : num [1:100] -1.559 0.42 -1.428 0.306 -0.115 ...
+##   ..$ x   : num [1:100] 0.2433 -1.0106 -0.0238 -1.7328 -1.9923 ...
 ##  $ site_10:'data.frame':	100 obs. of  2 variables:
 ##   ..$ site: Factor w/ 10 levels &quot;site_01&quot;,&quot;site_02&quot;,..: 10 10 10 10 10 10 10 10 10 10 ...
-##   ..$ x   : num [1:100] -0.296 1.185 1.665 0.312 0.818 ...
+##   ..$ x   : num [1:100] -1.8217 0.7758 0.848 -0.6405 0.0306 ...
 </code></pre>
 <pre><code class="language-r"># create a cluster with 5 cores
 cl = makeCluster(5, type = &quot;PSOCK&quot;) 
@@ -358,60 +358,60 @@ stopCluster(cl)
 <pre><code class="language-r">my_means_par
 </code></pre>
 <pre><code>## [[1]]
-##      site      mean_x
-## 1 site_01 -0.07830318
+##      site    mean_x
+## 1 site_01 0.1094112
 ## 
 ## [[2]]
-##      site     mean_x
-## 1 site_02 -0.1105719
+##      site      mean_x
+## 1 site_02 -0.05641448
 ## 
 ## [[3]]
-##      site     mean_x
-## 1 site_03 0.07042259
+##      site      mean_x
+## 1 site_03 -0.01679702
 ## 
 ## [[4]]
 ##      site      mean_x
-## 1 site_04 -0.01167078
+## 1 site_04 -0.05495145
 ## 
 ## [[5]]
-##      site     mean_x
-## 1 site_05 -0.0676093
+##      site      mean_x
+## 1 site_05 -0.09106323
 ## 
 ## [[6]]
-##      site       mean_x
-## 1 site_06 -0.006799576
+##      site    mean_x
+## 1 site_06 0.1579891
 ## 
 ## [[7]]
 ##      site     mean_x
-## 1 site_07 -0.1309067
+## 1 site_07 -0.0804188
 ## 
 ## [[8]]
-##      site      mean_x
-## 1 site_08 -0.07931092
+##      site     mean_x
+## 1 site_08 0.05828263
 ## 
 ## [[9]]
 ##      site     mean_x
-## 1 site_09 0.05367691
+## 1 site_09 0.07098388
 ## 
 ## [[10]]
-##      site    mean_x
-## 1 site_10 0.1916662
+##      site      mean_x
+## 1 site_10 -0.04421739
 </code></pre>
 <p>We can now convert this list into a dataframe by doing</p>
 <pre><code class="language-r">my_means_par_df&lt;- bind_rows(my_means_par)
 my_means_par_df
 </code></pre>
-<pre><code>##       site       mean_x
-## 1  site_01 -0.078303180
-## 2  site_02 -0.110571868
-## 3  site_03  0.070422586
-## 4  site_04 -0.011670779
-## 5  site_05 -0.067609299
-## 6  site_06 -0.006799576
-## 7  site_07 -0.130906727
-## 8  site_08 -0.079310917
-## 9  site_09  0.053676914
-## 10 site_10  0.191666237
+<pre><code>##       site      mean_x
+## 1  site_01  0.10941118
+## 2  site_02 -0.05641448
+## 3  site_03 -0.01679702
+## 4  site_04 -0.05495145
+## 5  site_05 -0.09106323
+## 6  site_06  0.15798907
+## 7  site_07 -0.08041880
+## 8  site_08  0.05828263
+## 9  site_09  0.07098388
+## 10 site_10 -0.04421739
 </code></pre>
 <pre><code class="language-r"># check that the serial and parallel outputs are the same
 all.equal(my_means_df,my_means_par_df) 
