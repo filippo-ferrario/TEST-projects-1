@@ -124,4 +124,6 @@ all.equal(my_means_df,my_means_par_df)
 #' + https://www.r-bloggers.com/2014/07/implementing-mclapply-on-windows-a-primer-on-embarrassingly-parallel-computation-on-multicore-systems-with-r/
 #' + https://psu-psychology.github.io/r-bootcamp-2018/talks/parallel_r.html
 
- 
+#' Info on my Session (R and package versions ) 
+
+sessionInfo() 
