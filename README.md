@@ -7,3 +7,8 @@ Project folder hierarchy:
 + A `packrat` folder with defining the shared/common library for both sub-projects
 + the file `0-packrat-initialize.R` that has been created by Filippo Ferrario at the beginning to initialize the library
 
+
+Hi, this is Katie. Trying out some changes...
+
+I think we should remove the division 'BC' vs 'QC'. Lets have a folder 'Telem' and then we can have folders for other types of data (mosaic, environmental etc.) and those folders can be divided by region or site afterwards if we want.
+
