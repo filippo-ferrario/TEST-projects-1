@@ -23,3 +23,9 @@ FF... it is 14:27
 
 
 KM: And now 2:56...
+
+
+
+# ------------
+I ran the parallel processing example (thank-you Filippo) using my R version and library to test the script without the packrat issues. Everything works great.
+
