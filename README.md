@@ -13,3 +13,5 @@ Hi, this is Katie. Trying out some changes...
 I think we should remove the division 'BC' vs 'QC'. Lets have a folder 'Telem' and then we can have folders for other types of data (mosaic, environmental etc.) and those folders can be divided by region or site afterwards if we want.
 
 FF: agree but these were just names for an example... ;)
+
+MF: Test to modify the read me!
