@@ -125,3 +125,6 @@ all.equal(my_means_df,my_means_par_df)
 #' + https://psu-psychology.github.io/r-bootcamp-2018/talks/parallel_r.html
 
  
+#' Info on my Session (R and package versions ) 
+
+sessionInfo()
