@@ -1,13 +1,13 @@
 Package: minqa
 Type: Package
 Title: Derivative-Free Optimization Algorithms by Quadratic
-        Approximation
+    Approximation
 Version: 1.2.6
 Author: Douglas Bates, Katharine M. Mullen, John C. Nash, Ravi Varadhan
 Maintainer: Katharine M. Mullen <katharine.mullen@stat.ucla.edu>
 Description: Derivative-free optimization by quadratic approximation
-        based on an interface to Fortran implementations by M. J. D.
-        Powell.
+    based on an interface to Fortran implementations by M. J. D.
+    Powell.
 License: GPL-2
 URL: http://optimizer.r-forge.r-project.org
 Imports: Rcpp (>= 0.9.10)
@@ -20,3 +20,6 @@ Date/Publication: 2023-09-11 05:40:02 UTC
 Built: R 4.2.3; x86_64-w64-mingw32; 2024-01-24 02:03:12 UTC; windows
 ExperimentalWindowsRuntime: ucrt
 Archs: x64
+InstallAgent: packrat 0.9.2
+InstallSource: CRAN
+Hash: b442d2c5bbef71977b988e308aae8c54
