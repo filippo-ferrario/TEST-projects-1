@@ -1,0 +1,49 @@
+ Using R 4.2.2 (lockfile was generated with R 4.3.1)
+- Project '~/TEST-projects-1' loaded. [renv 1.0.3]
+- One or more packages recorded in the lockfile are not installed.
+- Use `renv::status()` for more details.
+Warning message:
+"~/.Rprofile" is missing a trailing newline 
+> dir.create('R_output/dataset', showWarnings = TRUE, recursive = T)
+> 
+> setwd('telemBC')
+> 
+> # run this section only the first time.
+> dir.create('R_output/dataset', showWarnings = TRUE, recursive = T)
+> dir.create('R_output/images', showWarnings = TRUE, recursive = T)
+Warning message:
+In dir.create("R_output/images", showWarnings = TRUE, recursive = T) :
+  'R_output\images' already exists
+> dir.create('R_output/Rmarkdown', showWarnings = TRUE, recursive = T)
+Warning message:
+In dir.create("R_output/Rmarkdown", showWarnings = TRUE, recursive = T) :
+  'R_output\Rmarkdown' already exists
+> dir.create('R_output/spatial', showWarnings = TRUE, recursive = T)
+Warning message:
+In dir.create("R_output/spatial", showWarnings = TRUE, recursive = T) :
+  'R_output\spatial' already exists
+>  
+> 
+> 
+> # ================================================
+> # check for packages and Install missing ones
+> # ================================================
+> library(shaRe) # get it from devtools::install_github('filippo-ferrario/shaRe', ref='HEAD')
+Error in library(shaRe) : there is no package called ‘shaRe’
+> 
+> checkNinst(c('tidyverse',
++ 'foreach',
++ 'doParallel',
++ 'ezknitr'), inst=F)
+Error in checkNinst(c("tidyverse", "foreach", "doParallel", "ezknitr"),  : 
+  could not find function "checkNinst"
+> 
+> 
+> # ======================
+> # load packages
+> # ======================
+> library(tidyverse)
+Error in library(tidyverse) : there is no package called ‘tidyverse’
+> library(foreach)
+Error in library(foreach) : there is no package called ‘foreach’
+> library(doParallel)
