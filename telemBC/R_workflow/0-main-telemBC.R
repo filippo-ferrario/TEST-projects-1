@@ -20,7 +20,7 @@ dir.create('R_output/spatial', showWarnings = TRUE, recursive = T)
 # ================================================
 # check for packages and Install missing ones
 # ================================================
-#library(shaRe) # get it from devtools::install_github('filippo-ferrario/shaRe', ref='HEAD')
+library(shaRe) # get it from devtools::install_github('filippo-ferrario/shaRe', ref='HEAD')
 
 # checkNinst(c('tidyverse',
 # 'foreach',
@@ -45,4 +45,9 @@ library(ezknitr)
 # -----------------------------------
 # input: none
 ezspin(file='R_workflow/example-parallel_processing.R', keep_md=FALSE,  out_dir='R_output/Rmarkdown')
-# input: /R_output/Rmarkdown/example-parallel_processing.html
+# output: /R_output/Rmarkdown/example-parallel_processing.html
+
+# create a test dataset
+source('R_workflow/create_test_dataset.R')
+rm(list=ls())
+# output R_output/dataset/my_data.csv
